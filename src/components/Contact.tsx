@@ -172,7 +172,7 @@ export default function Contact() {
                     } else {
                       alert("Erro ao enviar mensagem. Tente novamente.");
                     }
-                  } catch (error) {
+                  } catch {
                     alert("Erro ao enviar mensagem. Tente novamente.");
                   }
                 }}

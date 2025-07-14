@@ -35,7 +35,7 @@ export default function ContactForm({ service }: { service: string }) {
       } else {
         throw new Error('Falha no envio');
       }
-    } catch (_error) {
+    } catch {
       setMessage({ text: 'Erro ao enviar mensagem. Tente novamente.', type: 'error' });
     } finally {
       setIsLoading(false);
