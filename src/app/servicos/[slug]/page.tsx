@@ -1,4 +1,3 @@
-// app/servicos/[slug]/page.tsx
 import { services } from '@/data/services';
 import { portfolioItems } from '@/data/portfolio';
 import { testimonials } from '@/data/testimonials';
@@ -9,10 +8,17 @@ import { ChevronRight, Check } from 'lucide-react';
 import NavbarServices from '@/components/NavbarServices';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const resolvedParams = await params;
-  const service = services.find(s => s.slug === resolvedParams.slug);
+// Defina a interface para os parâmetros
+interface PageParams {
+  params: {
+    slug: string;
+  };
+}
+
+export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
+  const service = services.find(s => s.slug === params.slug);
   
   return {
     title: `${service?.title} | Copinski Films`,
@@ -23,12 +29,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function ServicePage({ params }: { params: { slug: string } }) {
-  // Await params if it's a Promise (for dynamic routes in Next.js)
-  const resolvedParams = await params;
-  const service = services.find(s => s.slug === resolvedParams.slug);
-  const servicePortfolio = portfolioItems.filter((item: { service: string }) => item.service === resolvedParams.slug);
-  const serviceTestimonials = testimonials.filter(t => t.service === resolvedParams.slug);
+export default async function ServicePage({ params }: PageParams) {
+  const service = services.find(s => s.slug === params.slug);
+  const servicePortfolio = portfolioItems.filter((item: { service: string }) => item.service === params.slug);
+  const serviceTestimonials = testimonials.filter(t => t.service === params.slug);
 
   if (!service) {
     return (
