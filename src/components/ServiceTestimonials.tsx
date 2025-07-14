@@ -29,7 +29,7 @@ export default function ServiceTestimonials({ testimonials }: { testimonials: Te
               <p className="text-gray-400 text-sm">{testimonial.role}</p>
             </div>
           </div>
-          <p className="text-gray-300 italic">"{testimonial.content}"</p>
+          <p className="text-gray-300 italic">&quot;{testimonial.content}&quot;</p>
         </div>
       ))}
     </div>

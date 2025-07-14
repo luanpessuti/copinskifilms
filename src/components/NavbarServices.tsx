@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from "react";
-import { Menu, X, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function NavbarServices() {
     const router = useRouter();
@@ -27,7 +27,7 @@ export default function NavbarServices() {
                     </button>
 
                     {/* Center: Logo */}
-                    <a href="/" className="flex items-center mx-auto">
+                    <Link href="/" className="flex items-center mx-auto">
                         <Image
                             src="/logocopinski.avif"
                             alt="Copinski Films Logo"
@@ -36,7 +36,7 @@ export default function NavbarServices() {
                             className="mt-4 h-auto w-auto"
                             priority
                         />
-                    </a>
+                    </Link>
                 </div>
             </div>
         </nav>

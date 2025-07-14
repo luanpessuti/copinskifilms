@@ -5,9 +5,10 @@ import { testimonials } from '@/data/testimonials';
 import ServiceGallery from '@/components/ServiceGallery';
 import ServiceTestimonials from '@/components/ServiceTestimonials';
 import ContactForm from '@/components/ContactForm';
-import { ChevronRight, Play, Check } from 'lucide-react';
+import { ChevronRight, Check } from 'lucide-react';
 import NavbarServices from '@/components/NavbarServices';
 import Footer from '@/components/Footer';
+import Link from 'next/link';
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const resolvedParams = await params;
@@ -34,10 +35,9 @@ export default async function ServicePage({ params }: { params: { slug: string }
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Serviço não encontrado</h1>
-          <p className="text-xl">O serviço que você está procurando não existe ou foi removido.</p>
-          <a href="/servicos" className="mt-6 inline-flex items-center text-bordeux font-medium">
+          <Link href="/servicos" className="mt-6 inline-flex items-center text-bordeux font-medium">
             Ver todos os serviços <ChevronRight className="ml-1" />
-          </a>
+          </Link>
         </div>
       </div>
     );
