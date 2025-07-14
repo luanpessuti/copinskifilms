@@ -16,12 +16,12 @@ export default function Hero() {
     >
       <div className="absolute inset-0 w-full h-full -z-10">
         <Image
-          src="https://blog.sothebysrealty.ae/hubfs/Imported_Blog_Media/5f860961-5e85-459b-b261-410eb3e4ea63-1.jpg"
+          src="https://images.unsplash.com/photo-1531645881745-b2efaf89e98f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Eduardo Copinski"
           fill
           className="object-cover"
           sizes="100vw"
-          style={{ transform: "scaleX(-1)" }}
+          style={{ transform: "scaleX(1)" }}
         />
       </div>
 
@@ -37,14 +37,16 @@ export default function Hero() {
           <span className="text-offwhite">FILMS</span>
         </h1>
 
-        <p className="text-xl md:text-xl mb-8 leading-snug max-w-4xl font-light">
+        <p className="text-xl md:text-xl bg-black/10 mb-8 leading-snug max-w-4xl font-light px-4 py-2 border rounded-4xl">
           <span className="font-bold">Videomaker</span> com mais de cinco anos de experiência no mercado, ajudo empresas
           e pessoas a realizar produções audiovisuais para comerciais, eventos,
-          casamentos, festas, imobiliários entre outros.
-        </p>
-
-        <p className="text-lg md:text-xl mb-12 text-offwhite border px-4 py-2 w-65 rounded-4xl">
-          Baseado em Curitiba, PR.
+          casamentos, festas, imobiliários entre outros.<br /><br />
+          <span className="inline-flex items-center gap-2 whitespace-nowrap">
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-bordeux" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
+            </svg>
+            <span>Baseado em Curitiba, PR.</span>
+          </span>
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-start">

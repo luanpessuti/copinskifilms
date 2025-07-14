@@ -27,7 +27,6 @@ export default function Navbar() {
               { label: "Início", href: "home" },
               { label: "Sobre", href: "about" },
               { label: "Serviços", href: "services" },
-              { label: "Portfolio", href: "portfolio" },
               { label: "Contato", href: "contact" },
             ].map(({ label, href }, i) => (
               <a
@@ -54,7 +53,6 @@ export default function Navbar() {
               { label: "Início", href: "home" },
               { label: "Sobre", href: "about" },
               { label: "Serviços", href: "services" },
-              { label: "Portfolio", href: "portfolio" },
               { label: "Contato", href: "contact" },
             ].map(({ label, href }, i) => (
               <a

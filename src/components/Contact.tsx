@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+
 export default function Contact() {
   return (
     <motion.section
@@ -92,7 +93,7 @@ export default function Contact() {
 
           {/* Direita: Formulário */}
           <motion.div
-            className="bg-white/5 p-8 rounded-lg flex items-center h-fit"
+            className="bg-white/5 p-8 rounded-lg flex items-center h-fit border border-white/20 shadow-lg"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -136,7 +137,43 @@ export default function Contact() {
                   placeholder="Conte-nos mais sobre seu projeto..."
                 ></textarea>
               </div>
-              <button className="w-full btn-primary bg-white text-black hover:bg-bordeux">
+              <button
+                type="submit"
+                className="w-full btn-primary bg-white text-black hover:bg-bordeux"
+                onClick={async (e) => {
+                  e.preventDefault();
+                  const form = e.currentTarget.form;
+
+                  if (!form) {
+                    alert("Erro interno: formulário não encontrado.");
+                    return;
+                  }
+
+                  try {
+                    const response = await fetch('/api/submit-form', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({
+                        nome: form.nome.value,
+                        email: form.email.value,
+                        tipo: form.tipo.value,
+                        mensagem: form.mensagem.value
+                      })
+                    });
+
+                    if (response.ok) {
+                      alert("Mensagem enviada com sucesso!");
+                      form.reset();
+                    } else {
+                      throw new Error('Falha no envio');
+                    }
+                  } catch (error) {
+                    alert("Erro ao enviar mensagem. Tente novamente.");
+                  }
+                }}
+              >
                 Enviar Mensagem
               </button>
             </form>
