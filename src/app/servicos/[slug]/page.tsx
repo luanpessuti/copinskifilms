@@ -32,7 +32,9 @@ export default async function ServicePage(
   const { slug } = await params;                         // ← resolve Promise
   const cleanSlug = Array.isArray(slug) ? slug[0] : slug;
 
-  const service            = services.find(s => s.slug === cleanSlug);
+  const service = services.find(s => s.slug === cleanSlug);
+  const servicePortfolio = portfolioItems.filter(p => p.service === cleanSlug);
+  const serviceTestimonials = testimonials.filter(t => t.service === cleanSlug);
 
   /* slug inválido ---------------------------------- */
   if (!service) {
@@ -110,12 +112,12 @@ export default async function ServicePage(
           <h2 className="text-5xl font-bold mb-12 text-center">
             Nosso portfólio
           </h2>
-          <ServiceGallery items={portfolioItems} />
+          <ServiceGallery items={servicePortfolio} />
         </div>
       </section>
 
       {/* Testimonials */}
-      {testimonials.length > 0 && (
+      {serviceTestimonials.length > 0 && (
         <section className="py-16 md:py-24 bg-[#25262a]">
           <div className="container mx-auto px-4">
             <h2 className="text-5xl font-bold mb-12 text-center">
@@ -126,7 +128,7 @@ export default async function ServicePage(
                 <a className="text-bordeux underline">Fale conosco</a>
               </Link>
             )}
-            <ServiceTestimonials testimonials={testimonials} />
+            <ServiceTestimonials testimonials={serviceTestimonials} />
           </div>
         </section>
       )}
