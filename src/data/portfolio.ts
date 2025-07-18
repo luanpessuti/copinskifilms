@@ -156,4 +156,85 @@ export const portfolioItems: PortfolioItem[] = [
     thumbnail: 'https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     isShort: false
   },
+  //social media
+  {
+    id: 'social-media1',
+    title: 'Bar ZéPelin',
+    service: 'social-media',
+    videoUrl: 'https://www.youtube.com/shorts/QBjNsKBdgWI',
+    thumbnail: 'https://images.unsplash.com/photo-1575037614876-c38a4d44f5b8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    isShort: true
+  },
+  {
+    id: 'social-media2',
+    title: 'Flora Cozinha Familiar',
+    service: 'social-media',
+    videoUrl: 'https://www.youtube.com/shorts/52Lx4tqYPK0',
+    thumbnail: 'https://images.unsplash.com/photo-1592861956120-e524fc739696?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    isShort: true
+  },
+  {
+    id: 'social-media3',
+    title: 'NIUÊ.BAR',
+    service: 'social-media',
+    videoUrl: 'https://www.youtube.com/shorts/QzCnQen9cf8',
+    thumbnail: 'https://images.unsplash.com/photo-1546622891-02c72c1537b6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    isShort: true
+  },
+  {
+    id: 'social-media4',
+    title: 'Bar ZéPelin',
+    service: 'social-media',
+    videoUrl: 'https://www.youtube.com/shorts/rXcG0R_JjT0',
+    thumbnail: 'https://images.unsplash.com/photo-1620219365994-f443a86ea626?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    isShort: true
+  },
+  {
+    id: 'social-media5',
+    title: 'Feijoada P4',
+    service: 'social-media',
+    videoUrl: 'https://www.youtube.com/shorts/0WN5g_jZhPQ',
+    thumbnail: 'https://images.unsplash.com/photo-1578974721235-ecce3a0d8dcf?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    isShort: true
+  },
+  {
+    id: 'social-media6',
+    title: 'Feijoada Daôci',
+    service: 'social-media',
+    videoUrl: 'https://www.youtube.com/shorts/Z7ysVZfCqLI',
+    thumbnail: 'https://images.unsplash.com/photo-1651440204296-a79fa9988007?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    isShort: true
+  },
+  {
+    id: 'social-media7',
+    title: 'Dom Carmelito',
+    service: 'social-media',
+    videoUrl: 'https://www.youtube.com/shorts/EBfzcNWC72U',
+    thumbnail: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    isShort: true
+  },
+  {
+    id: 'social-media8',
+    title: 'Dom Carmelito',
+    service: 'social-media',
+    videoUrl: 'https://www.youtube.com/shorts/HwHK7byfiQY',
+    thumbnail: 'https://images.unsplash.com/photo-1581340387428-daa644fbedb3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    isShort: true
+  },
+  {
+    id: 'social-media9',
+    title: 'Flora Cozinha Familiar',
+    service: 'social-media',
+    videoUrl: 'https://www.youtube.com/shorts/iZIrlox9V2Y',
+    thumbnail: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    isShort: true
+  },
+  {
+    id: 'social-media10',
+    title: 'NIUÊ.BAR',
+    service: 'social-media',
+    videoUrl: 'https://www.youtube.com/shorts/9bZPwZbrjd4',
+    thumbnail: 'https://images.unsplash.com/photo-1749331479860-96ce9e68a725?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    isShort: true
+  },
 ];

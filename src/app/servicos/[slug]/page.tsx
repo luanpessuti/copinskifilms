@@ -53,7 +53,7 @@ export default async function ServicePage(
 
   // ---------- Conteúdo da página ----------
   return (
-    <div className="bg-[#1d1e20] text-offwhite">
+    <div className="bg-[#25262a] text-offwhite">
       <NavbarServices />
 
       {/* Hero */}
@@ -79,8 +79,18 @@ export default async function ServicePage(
         </div>
       </section>
 
+      {/* Portfolio */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="text-5xl font-bold mb-12 text-center">
+            Nosso portfólio
+          </h2>
+          <ServiceGallery items={servicePortfolio} />
+        </div>
+      </section>
+
       {/* Features */}
-      <section className="py-16 md:py-24 bg-[#25262a]">
+      <section className="py-16 md:py-24 bg-[#1d1e20]">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl font-bold mb-12 text-center">
             O que oferecemos
@@ -106,16 +116,6 @@ export default async function ServicePage(
         </div>
       </section>
 
-      {/* Portfolio */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold mb-12 text-center">
-            Nosso portfólio
-          </h2>
-          <ServiceGallery items={servicePortfolio} />
-        </div>
-      </section>
-
       {/* Testimonials */}
       {serviceTestimonials.length > 0 && (
         <section className="py-16 md:py-24 bg-[#25262a]">
@@ -134,7 +134,7 @@ export default async function ServicePage(
       )}
 
       {/* Contact */}
-      <section id="contato" className="py-16 md:py-24">
+      <section id="contato" className="py-16 md:py-24 bg-[#1d1e20]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto bg-[#25262a] p-8 md:p-12 rounded-xl">
             <h2 className="text-3xl font-bold mb-6">Solicite um orçamento</h2>

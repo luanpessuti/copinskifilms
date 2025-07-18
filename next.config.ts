@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "imageio.forbes.com",
         pathname: "/**",
-      }
+      },
     ],
   },
 };
